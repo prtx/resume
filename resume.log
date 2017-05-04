@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.3)  16 APR 2017 22:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.3)  4 MAY 2017 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -617,56 +617,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--49
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--76
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 80.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 53.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--122
+Underfull \hbox (badness 10000) in paragraph at lines 51--66
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
+
+Overfull \hbox (1.55533pt too wide) in paragraph at lines 51--66
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--132
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 \end{document}
+l.133 \end{document}
                      [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
  (./resume.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
  5832 strings out of 494910
  84639 string characters out of 6179837
- 174077 words of memory out of 5000000
+ 175077 words of memory out of 5000000
  9087 multiletter control sequences out of 15000+600000
  5117 words of font info for 19 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -678,7 +683,7 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy8.pfb>
-Output written on resume.pdf (2 pages, 98168 bytes).
+Output written on resume.pdf (2 pages, 99055 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
