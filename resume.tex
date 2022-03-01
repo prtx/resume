@@ -1,154 +1,178 @@
-%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
-\documentclass[letterpaper,10pt,oneside]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{setspace}
-\usepackage{hyperref}
-\usepackage{flafter}
-\usepackage{graphicx}
-\graphicspath{ {images/}} %upload your signature to this file
-\usepackage[left=0.75in, right=0.75in, bottom=0.75in, top=0.75in]{geometry}
-\pagenumbering{gobble}
-\newcommand{\nextitem}{\par\hspace*{\labelsep}\textbullet\hspace*{\labelsep}}
-%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%%%%%%
 
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[left=0.5in, right=0.5in, bottom=0.5in, top=0.5in]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Pratik}{Shrestha}
+% \title{Graph Learning - Electronic Design Automation - Python}                               % optional, remove / comment the line if not wanted
+
+\address{Philadelphia, PA}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{+977-9849803636}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+% \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{ps937@drexel.com}                               % optional, remove / comment the line if not wanted
+\homepage{prtx.github.io}                         % optional, remove / comment the line if not wanted
+\social[github]{prtx}
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
 \begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-10mm}
 
-%%%%%%%%%%%%%%%%% NAME OF APPLICANT %%%%%%%%%%%%%%%%%%%
+\section{Education}
 
-\noindent  \textbf{\Large{PRATIK SHRESTHA}}\\
-\vspace{-2ex}
-\hline
-\normalsize
+\cventry{2019 - Present}{Ph.D. in Electrical Engineering}{}{}{}{Drexel University, Philadelphia, Pennsylvania
+\\\textbf{Relevant Courseworks:}
+VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
+}
 
-%%%%%%%%%%%%%%%%% CONTACT INFORMATION %%%%%%%%%%%%%%%%%
+\cventry{2012 - 2016}{Bachelors in Computer Engineering}{}{}{}{Kathmandu University, Dhulikhel, Kavre, Nepal
+% \\\textbf{Relevant Coursework}\\
+% Statistics and Probability, Data Structure and Algorithm, Compiler Design, Artificial Intelligence
+}
 
-\begin{tabular}{l l}
- \\
- EMAIL: & \href{mailto:prtx.pratikshrestha@gmail.com}{prtx.pratikshrestha@gmail.com} \\
- GITHUB: & \href{http://github.com/prtx}{github.com/prtx} \\
- LINKEDIN: & \href{http://np.linkedin.com/in/shresthapratik}{np.linkedin.com/in/shresthapratik} \\\\
-\end{tabular}
+\section{Research Experience}
 
-\hline
-\vspace{0em}
+%\subsection{Vocational}
 
-%%%%%%%%%%%%%%%%% MAIN BODY %%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The main body is contained in a tabular environment. To move sections onto the next page, simply end the tabular environment and begin a new tabular environment.
-
-\paragraph{\large{Education and Technical Proficiency}\\\\}
-\noindent \begin{tabular}{l l}
- 2016    & \textbf{Bachelors of Engineering (B.E.) in Computer Science}, Kathmandu University\\
-     & \textbf{Relevant Coursework} \\
-     & Data Structure and Algorithm, Algorithm and Complexity, Operating System, Compiler Design, \\
-     & Artificial Intelligence \\
-     & \textbf{Languages} \\
-     & Python, Shell, \LaTeX, C, C++, SQL
-     
-\end{tabular}
-
-\paragraph{\large{Work Experience}\\\\}
-\noindent \begin{tabular}{l l}
- Nov 2016-    & \textbf{Associate Software Developer/Consultant}, LIS Nepal Pvt. Ltd. (A Yómarí Company) \\
- Present      & \nextitem Provided technical support and consulted international clients on daily ETL batches. \\
-              & \nextitem Coordinating with onsite team leads to develop BI solutions to reports financial insights \\
-              & using Oracle tools OBIEE, BIP and Microsoft Excel (VBScipt). \\
-              & \nextitem Implemented a complete makeover of the company website to improve design, make mobile \\
-              & responsive and integrate vancancy post, submissions with email notifications. \\
-              & Technologies: Oracle, Korn Shell, Python, Django \\
-              \\
- Jun 2016-    & \textbf{Software Development Intern}, LIS Nepal Pvt. Ltd. (A Yómarí Company) \\
- Oct 2016     & \nextitem Developed ETL solutions, prepared release notes and testing documents. \\
-              & \nextitem Researched on and documented Oracle tool ODI (Oracle Data Integrator) Knowledge modules \\
-              & to migrate the system from Oracle to Teradata. \\
-              & Technologies: Oracle, Korn Shell, Python \\
-\end{tabular}
-
-\paragraph{\large{Leadership Positions}\\\\}
-\noindent \begin{tabular}{l l}
- 2016       & \textbf{Organizer}, Kathmandu University IT MEET, 2016 \\
- 2015-16    & \textbf{Python Community Executive Co-ordinator}, Kathmandu University Computer Club(KUCC) \\
- 2013-16    & \textbf{Communication Information and Marketing}, AIESEC in Kathmandu University \\
-\end{tabular}
-
-
-\paragraph{\large{Achievements and Certifications}\\\\}
-\noindent \begin{tabular}{l l}
- 2014    & \textbf{NCell App Camp 2014 Category Winner (Business Category)} \\
-         & Pitched and presented Opinio Android Application. \\
- 2014    & \textbf{Startup Weekend Kathmandu 2014 Winner} \\
-         & Pitched and presented Opinio. \\
-\end{tabular}
-
-\paragraph{\large{Interests and Activities}}
+\cventry{Aug 2019 - Present}{Graduate Researcher}{}{Integrated Circuits and Electronics Lab, Drexel University}{}{
 \begin{itemize}
-    \itemsep-0.2em 
-    \item Programming, Problem solving, Whiteboards
-    \item Linux
-    \item Artificial Intelligence, Mathematical Modelling and Natural Language Processing
-    \item Music and guitar
-    \item Cartoon, comics and movies
+    \item Graph representation learning guided electronic design automation.
+    \begin{itemize}
+        \item Automated physical design (using DC/IC Compiler and PrimeTime) for large scale dataset generation at different design stages (logic synthesis, floorplan, placement, CTS, routing).
+        \item Designed spatial graph based neural network architecture to learn timing and parasitic information from the generated datasets.
+    \end{itemize}
+    \item Hardware security and sequential circuit obfuscation.
+    \begin{itemize}
+        \item Developed synthesis algorithm and security measurements for FSM obfuscation techniques.
+        \item Implement obfuscation algorithms on benchmark ICs and physical design using Synopsys DC/IC Compiler and Cadence Virtuoso.
+    \end{itemize}
+    % \item Research on graph representation learning guided electronic design automation and digital circuit obfuscation.
+    % \item Write Bash and Python scripts to automate workflow.
+    % \item Write Bash and Python scripts to automate workflow.
 \end{itemize}
+}
 
-\newpage
 
-\paragraph{\large{Projects}\\\\}
-\noindent \begin{tabular}{l l}
- 2016    & \textbf{University Lecture PDF Search Engine} \\
-         & An information retrieval system that searches lecture PDFs from top university sites based on the \\
-         & provided search queries. \\
-         & \footnotesize{\nextitem Crawled and scraped top university site for PDFs.} \\
-         & \footnotesize{\nextitem Parsed contents, meta-data and processed it using Natural Language ToolKit (NLTK).} \\
-         & \footnotesize{\nextitem Generated an inverted index.} \\
-         & \footnotesize{\nextitem Used Pearson's correlation for ranking and recommendation.} \\
-         & Technologies: Python, Django, json, requests, MongoDB \\
-         \\
- 2015    & \textbf{Nepal Quake Retweet} \\
-         & A computerized real-time retweet mechanism for Nepal Earthquake 2015. \\
-         & \footnotesize{\nextitem  Used Twitter streaming API, Twitter REST API for social media data.} \\
-         & \footnotesize{\nextitem Recognized related tweets using Natural Language Processing.} \\
-         & Technologies: Python, json, requests \\
-         \\
- 2014-15 & \textbf{TheOpinio.co} \\
-         & Aggregated analysis and insights of opinions over social media on product, service or business. \\
-         & \footnotesize{\nextitem  Implemented social authentication using oauth2.} \\
-         & \footnotesize{\nextitem  Used Twitter streaming API, Twitter REST API for social media data.} \\
-         & \footnotesize{\nextitem Implemented Naive-Bayes algorithm to calculate sentiment polarity of tweets based on trained data-set.} \\
-         & \footnotesize{\nextitem  Generated various analytics along with sentiment analysis of tweets.} \\
-         & Technologies: Python, Django, MongoDB, json \\
-         \\
- 2014    & \textbf{Research on Sentiment Analysis in Music} \\
-         & A research to provide measures to analyze sentiment polarity of music, recognize musical notations \\
-         & and chords from a music piece. \\
-         & \footnotesize{\nextitem Sampled and applied FFT to obtain a music piece in frequency domain.} \\
-         & \footnotesize{\nextitem Created a repository of lyrics and chords of songs scraped from azchords.com.} \\
-         & \footnotesize{\nextitem Applied music theory to the frequencies to obtain notations and chords.} \\
-         & \footnotesize{\nextitem Implemented Naive-Bayes algorithm on chord patterns to determine polarity.} \\
-         & \footnotesize{\nextitem Mapped music pieces in Russell’s Multidimensional model and Thayers’s Model.} \\
-         & Technologies: Python(scipy), Django, SQLite, BeautifulSoup, Selenium \\
-         \\
- 2013-14 & \textbf{Desktop Search Engine for Help Nepal} \\
-         & A file-system search engine that searches based on keywords and file types. \\
-         & \footnotesize{\nextitem Probed and parsed contents, meta-data and standardized from files of different format.} \\
-         & \footnotesize{\nextitem Processed the content using Natural Language ToolKit (NLTK).} \\
-         & \footnotesize{\nextitem Generated an index and search a algorithm.} \\
-         & Technologies: Python, TKinter, SQL \\
-         \\
- 2013    & \textbf{Markdown to LaTeX Converter} \\
-         & A script to convert Markdown to complex documentation language LaTeX. \\
-         & \footnotesize{\nextitem Used regular expressions to parse and translate source code.} \\
-         & Technologies: Python \\
 
-\end{tabular}
+\section{Professional Experience}
 
-\paragraph{\large{Volunteerism}\\\\}
-\noindent \begin{tabular}{l l}
- 2015    & \textbf{National Information Technology Center (NITC), Nepal - Earthquake Relief Portal} \\
-         & \textbf{Development} \\
-         & Contributed in developing an online government portal dedicated to service and relief through data, \\
-         & information and communication during the unfortunate earthquake in Nepal. \\
-         \\
-\end{tabular}
+%\subsection{Vocational}
 
+\cventry{Jan 2018 - June 2019}{Engineering Consultant}{}{Leapfrog Technologies}{}{
+\begin{itemize}
+    \item \textbf{Ed-Fi Alliance Analytics Middleware:} Rapid synthesis and reporting of Texas school district data across rosters, transcripts, assessments, college applications, etc.
+    %  system that de-normalizes education related data from multiple sources and allows education professionals to generate reports as per their requirements.
+    \item Developed python modules for data extraction, parsing, pipeline, storage, report generation.
+    \item Created RESTful API's for client-end applications and statistical analysis tool to monitor server traffic.
+    % \item Managed virtual servers at Amazon EC2, S3. Developed production deployment scripts.
+    % \item Optimized investment portfolios using Capital Asset Pricing Model and created automated trading algorithms.
+\end{itemize}
+\textit{}
+% \textbf{Technologies}: Python, Flask, PosgreSQL, MS-SQL, Airflow, Pandas, Amazon EC2, Nginx \\
+}
+
+
+\cventry{Jun 2017 - June 2019}{Software Engineer}{}{Beta Analytics Pvt. Ltd}{}{
+\begin{itemize}
+    \item \textbf{NEPSEguide:} Pricing and risk analytic tools to support financial risk management.% Designed and developed company's core product suite.
+    \item Designed data entry, normalization and verification systems supporting 30+ cloud workers to collect fundamental data of companies listed in Nepal Stock Exchange (NEPSE).
+    \item Collected NEPSE pricing data from various sources and maintained them in a central data warehouse.
+    \item Implemented statistical metrics for predictive analyses. Developed stock screener and charting tools to analyze asset performance.
+\end{itemize}
+\textit{}
+% \textbf{Technologies}: Python, Flask, PosgreSQL, MongoDB, SQLAlchemy, Pandas \\
+}
+
+
+\cventry{Nov 2016 - Jun 2017}{Associate Developer}{}{LIS Nepal Pvt. Ltd. (A Yomari Company)}{}{
+\begin{itemize}
+    \item Implemented Oracle Retail Analytics Data-warehousing architecture and develop BI solutions.
+    \item Provided 24-hr technical support and consulted offshore clients on ETL batches.
+\end{itemize}
+\textit{}
+% \textbf{Technologies}: Oracle, ODI, OBIEE, BIP, Korn Shell, VBScipt, Python\\
+}
+
+
+\cventry{Jun 2016 - Oct 2016}{Software Development Intern}{}{LIS Nepal Pvt. Ltd. (A Yomari Company)}{}{
+\begin{itemize}
+    \item Assisted as a part of R\&D team to study and migrate Oracle Data Integrator (ODI) knowledge modules from Oracle to Teradata.
+\end{itemize}
+% \textbf{Technologies}: Oracle, Teradata, ODI, Korn Shell, Python, Django\\   
+}
+
+\section{Technical Proficiency}
+
+\cvitem{Languages}{Python, Verilog, VHDL, Bash, SQL (Expertise)}
+\cvitem{}{R, Matlab, Java, Javascript, VBScript, C++, C (Working Knowledge)}
+\cvitem{EDA}{Synopsys: DC Compiler, IC Compiler, PrimeTime; Cadence: Virtuoso}
+\cvitem{Data/ML}{Pandas, Tensorboard, Statsmodel, Scikit-learn, Torch, Torch-geometric, NLTK, Gensim}
+\cvitem{Databases}{PostgreSQL, MongoDB, MS-SQL, Oracle, Teradata}
+\cvitem{DevOps}{Docker, Nginx, Linux Server Administration}
+\cvitem{Frameworks}{SQLAlchemy, Scrapy, Airflow, Selenium, Flask, Django, Falcon}
+% \cvitem{Operating Systems}{Windows, UNIX, Linux, MacOSX}
+
+% \section{Publications}
+
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
+
+%% end of file `template.tex'.
