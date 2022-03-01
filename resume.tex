@@ -19,7 +19,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[left=0.5in, right=0.5in, bottom=0.5in, top=0.5in]{geometry}
+\usepackage[left=0.5in, right=0.5in, bottom=0.25in, top=0.25in]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -54,7 +54,7 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
-\vspace*{-10mm}
+\vspace*{-12.5mm}
 
 \section{Education}
 
@@ -77,12 +77,12 @@ VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
     \item Graph representation learning guided electronic design automation.
     \begin{itemize}
         \item Automated physical design (using DC/IC Compiler and PrimeTime) for large scale dataset generation at different design stages (logic synthesis, floorplan, placement, CTS, routing).
-        \item Designed spatial graph based neural network architecture to learn timing and parasitic information from the generated datasets.
+        \item Designed spatial graph based neural networks to model timing and parasitic information.
     \end{itemize}
     \item Hardware security and sequential circuit obfuscation.
     \begin{itemize}
-        \item Developed synthesis algorithm and security measurements for FSM obfuscation techniques.
-        \item Implement obfuscation algorithms on benchmark ICs and physical design using Synopsys DC/IC Compiler and Cadence Virtuoso.
+        \item Developed synthesis algorithm and security metric for FSM locking achieving 8.53x increase in security.
+        % \item Implement obfuscation algorithms on benchmark ICs and physical design using Synopsys DC/IC Compiler and Cadence Virtuoso.
     \end{itemize}
     % \item Research on graph representation learning guided electronic design automation and digital circuit obfuscation.
     % \item Write Bash and Python scripts to automate workflow.
@@ -96,7 +96,7 @@ VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
 
 %\subsection{Vocational}
 
-\cventry{Jan 2018 - June 2019}{Engineering Consultant}{}{Leapfrog Technologies}{}{
+\cventry{Jan 2018 - Jun 2019}{Engineering Consultant}{}{Leapfrog Technologies}{}{
 \begin{itemize}
     \item \textbf{Ed-Fi Alliance Analytics Middleware:} Rapid synthesis and reporting of Texas school district data across rosters, transcripts, assessments, college applications, etc.
     %  system that de-normalizes education-related data from multiple sources and allows education professionals to generate reports as per their requirements.
@@ -110,11 +110,11 @@ VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
 }
 
 
-\cventry{Jun 2017 - June 2019}{Software Engineer}{}{Beta Analytics Pvt. Ltd}{}{
+\cventry{Jun 2017 - Jun 2019}{Software Engineer}{}{Beta Analytics}{}{
 \begin{itemize}
     \item \textbf{NEPSEguide:} Pricing and risk analytic tools to support financial risk management.% Designed and developed the company's core product suite.
-    \item Designed data entry, normalization, and verification systems supporting 30+ cloud workers to collect fundamental data of companies listed in Nepal Stock Exchange (NEPSE).
-    \item Collected NEPSE pricing data from various sources and maintained them in a central data warehouse.
+    \item Designed data entry, normalization, and verification systems supporting 30+ remote data entry workers.
+    \item Designed data warehouse schema to support historical pricing data for Nepal stock exchange.
     \item Implemented statistical metrics for predictive analyses. Developed stock screener and charting tools to analyze asset performance.
 \end{itemize}
 \textit{}
@@ -122,7 +122,7 @@ VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
 }
 
 
-\cventry{Nov 2016 - Jun 2017}{Associate Developer}{}{LIS Nepal Pvt. Ltd. (A Yomari Company)}{}{
+\cventry{Nov 2016 - Jun 2017}{Associate Developer}{}{Logic Information Systems}{}{
 \begin{itemize}
     \item Implemented Oracle Retail Analytics Data-warehousing architecture and develop BI solutions.
     \item Provided 24-hr technical support and consulted offshore clients on ETL batches.
@@ -132,9 +132,9 @@ VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
 }
 
 
-\cventry{Jun 2016 - Oct 2016}{Software Development Intern}{}{LIS Nepal Pvt. Ltd. (A Yomari Company)}{}{
+\cventry{Jun 2016 - Oct 2016}{Software Development Intern}{}{Logic Information Systems}{}{
 \begin{itemize}
-    \item Assisted as a part of R\&D team to study and migrate Oracle Data Integrator (ODI) knowledge modules from Oracle to Teradata.
+    \item Migrated ETL tool Oracle Data Integrator's (ODI) knowledge modules from Oracle to Teradata.
 \end{itemize}
 % \textbf{Technologies}: Oracle, Teradata, ODI, Korn Shell, Python, Django\\   
 }
@@ -146,11 +146,23 @@ VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
 \cvitem{EDA}{Synopsys: DC Compiler, IC Compiler, PrimeTime; Cadence: Virtuoso}
 \cvitem{Data/ML}{Pandas, Tensorboard, Statsmodel, Scikit-learn, Torch, Torch-geometric, NLTK, Gensim}
 \cvitem{Databases}{PostgreSQL, MongoDB, MS-SQL, Oracle, Teradata}
-\cvitem{DevOps}{Docker, Nginx, Linux Server Administration}
-\cvitem{Frameworks}{SQLAlchemy, Scrapy, Airflow, Selenium, Flask, Django, Falcon}
+% \cvitem{DevOps}{Docker, Nginx, Linux Server Administration}
+\cvitem{Frameworks}{Docker, SQLAlchemy, Scrapy, Airflow, Selenium, Flask, Django, Falcon}
 % \cvitem{Operating Systems}{Windows, UNIX, Linux, MacOSX}
 
-% \section{Publications}
+\section{Awards}
+
+\cventry{2014}{NCELL App Camp 2014 Category Winner (Business Category)}{}{}{}{
+\begin{itemize}
+    \item Presented Opinio mobile app (aggregated analysis and visualization of social media mentions).
+    \item Nationwide competition with 150+ participating teams.
+\end{itemize}
+}
+\cventry{2014}{Startup Weekend Kathmandu 2014 Winner}{}{}{}{
+\begin{itemize}
+    \item Presented Opinio search (social media mention search and natural language analysis).
+\end{itemize}
+}
 
 
 
