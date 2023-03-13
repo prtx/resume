@@ -7,7 +7,7 @@
 
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-
+\usepackage{enumitem}
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
@@ -19,7 +19,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[left=0.5in, right=0.5in, bottom=0.25in, top=0.25in]{geometry}
+\usepackage[left=0.5in, right=0.5in, bottom=0.5in, top=0.5in]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -53,6 +53,7 @@
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
+\vspace*{-10mm}
 \makecvtitle
 \vspace*{-12.5mm}
 
@@ -60,7 +61,8 @@
 
 \cventry{2019 - Present}{Ph.D. in Electrical Engineering}{}{}{}{Drexel University, Philadelphia, Pennsylvania
 \\\textbf{Relevant Courseworks:}
-VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
+VLSI Design, ASIC Design, Machine Learning, Deep Learning, Hardware Security
+\vspace{0.05in}
 }
 
 \cventry{2012 - 2016}{Bachelors in Computer Engineering}{}{}{}{Kathmandu University, Dhulikhel, Kavre, Nepal
@@ -74,19 +76,18 @@ VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
 
 \cventry{Aug 2019 - Present}{Graduate Researcher}{}{Integrated Circuits and Electronics Lab, Drexel University}{}{
 \begin{itemize}
-    \item Graph representation learning guided electronic design automation.
+    \item Representation learning guided electronic design automation.\vspace{-0.5em}
     \begin{itemize}
-        \item Automated physical design (using DC/IC Compiler and PrimeTime) for large scale dataset generation at different design stages (logic synthesis, floorplan, placement, CTS, routing).
-        \item Designed spatial graph based neural networks to model timing and parasitic information.
+        \setlength\itemsep{-0.1em}
+        \item Developed an integrated framework for large scale circuit design dataset generation and rapid prototyping of deep learning models.
+        \item Modelled graph based neural networks to predict timing and interconnect impedance.
+        \vspace{-0.5em}
     \end{itemize}
-    \item Hardware security and sequential circuit obfuscation.
+    \item Hardware security and sequential circuit obfuscation.\vspace{-0.5em}
     \begin{itemize}
+        \setlength\itemsep{-0.1em}
         \item Developed synthesis algorithm and security metric for FSM locking achieving 8.53x increase in security.
-        % \item Implement obfuscation algorithms on benchmark ICs and physical design using Synopsys DC/IC Compiler and Cadence Virtuoso.
     \end{itemize}
-    % \item Research on graph representation learning guided electronic design automation and digital circuit obfuscation.
-    % \item Write Bash and Python scripts to automate workflow.
-    % \item Write Bash and Python scripts to automate workflow.
 \end{itemize}
 }
 
@@ -98,36 +99,40 @@ VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
 
 \cventry{Jan 2018 - Jun 2019}{Engineering Consultant}{}{Leapfrog Technologies}{}{
 \begin{itemize}
+    \setlength\itemsep{-0.1em}
     \item \textbf{Ed-Fi Alliance Analytics Middleware:} Rapid synthesis and reporting of Texas school district data across rosters, transcripts, assessments, college applications, etc.
     %  system that de-normalizes education-related data from multiple sources and allows education professionals to generate reports as per their requirements.
+    \item Developed yaml based domain specific language for rapid query generation.
     \item Developed python modules for data extraction, parsing, pipeline, storage, report generation.
     \item Created RESTful API for client-end applications and statistical analysis tool to monitor server traffic.
     % \item Managed virtual servers at Amazon EC2, S3. Developed production deployment scripts.
     % \item Optimized investment portfolios using Capital Asset Pricing Model and created automated trading algorithms.
+    \vspace{0.05in}
 \end{itemize}
-\textit{}
 % \textbf{Technologies}: Python, Flask, PostgreSQL, MS-SQL, Airflow, Pandas, Amazon EC2, Nginx \\
 }
 
 
 \cventry{Jun 2017 - Jun 2019}{Software Engineer}{}{Beta Analytics}{}{
 \begin{itemize}
+    \setlength\itemsep{-0.1em}
     \item \textbf{NEPSEguide:} Pricing and risk analytic tools to support financial risk management.% Designed and developed the company's core product suite.
     \item Designed data entry, normalization, and verification systems supporting 30+ remote data entry workers.
     \item Designed data warehouse schema to support historical pricing data for Nepal stock exchange.
     \item Implemented statistical metrics for predictive analyses. Developed stock screener and charting tools to analyze asset performance.
+    \vspace{0.05in}
 \end{itemize}
-\textit{}
 % \textbf{Technologies}: Python, Flask, PostgreSQL, MongoDB, SQLAlchemy, Pandas \\
 }
 
 
 \cventry{Nov 2016 - Jun 2017}{Associate Developer}{}{Logic Information Systems}{}{
 \begin{itemize}
+    \setlength\itemsep{-0.1em}
     \item Implemented Oracle Retail Analytics Data-warehousing architecture and develop BI solutions.
     \item Provided 24-hr technical support and consulted offshore clients on ETL batches.
+    \vspace{0.05in}
 \end{itemize}
-\textit{}
 % \textbf{Technologies}: Oracle, ODI, OBIEE, BIP, Korn Shell, VBScipt, Python\\
 }
 
@@ -140,29 +145,39 @@ VLSI Design, ASIC Design, Hardware Security, Machine Learning, Deep Learning\\
 }
 
 \section{Technical Proficiency}
-
-\cvitem{Languages}{Python, Verilog, VHDL, Bash, SQL (Expertise)}
+{\small
+\cvitem{Languages}{Python, Verilog, VHDL, Bash, TCL, SQL (Expertise)}
 \cvitem{}{R, Matlab, Java, Javascript, VBScript, C++, C (Working Knowledge)}
-\cvitem{EDA}{Synopsys: DC Compiler, IC Compiler, PrimeTime; Cadence: Virtuoso}
-\cvitem{Data/ML}{Pandas, Tensorboard, Statsmodel, Scikit-learn, Torch, Torch-geometric, NLTK, Gensim}
+\cvitem{EDA}{Synopsys: DC Compiler, IC Compiler, PrimeTime; Cadence: Virtuoso, Innovus}
+\cvitem{Data/ML}{Pandas, Tensorboard, Statsmodel, Scikit-learn, Torch, Torch-geometric, NLTK}
 \cvitem{Databases}{PostgreSQL, MongoDB, MS-SQL, Oracle, Teradata}
 % \cvitem{DevOps}{Docker, Nginx, Linux Server Administration}
-\cvitem{Frameworks}{Docker, SQLAlchemy, Scrapy, Airflow, Selenium, Flask, Django, Falcon}
+\cvitem{Frameworks}{Docker, SQLAlchemy, Scrapy, Airflow, Selenium, Flask, Django}
 % \cvitem{Operating Systems}{Windows, UNIX, Linux, MacOSX}
-
-\section{Awards}
-
-\cventry{2014}{NCELL App Camp 2014 Category Winner (Business Category)}{}{}{}{
-\begin{itemize}
-    \item Presented Opinio mobile app (aggregated analysis and visualization of social media mentions).
-    \item Nationwide competition with 150+ participating teams.
-\end{itemize}
 }
-\cventry{2014}{Startup Weekend Kathmandu 2014 Winner}{}{}{}{
-\begin{itemize}
-    \item Presented Opinio search (social media mention search and natural language analysis).
+
+
+\section{Publications}
+\begin{itemize}[labelindent=1.5em,leftmargin=*]
+    \setlength\itemsep{-0.1em}
+    \small
+    \item \textbf{Shrestha, P.}, Phatharodom, S., \& Savidis, I. (2022, September). Graph Representation Learning for Gate Arrival Time Prediction. In Proceedings of the 2022 ACM/IEEE Workshop on Machine Learning for CAD (pp. 127-133).
+    \item \textbf{Shrestha, P.}, \& Savidis, I. (2022, May). Synthesis of Coupling Capacitance Based Hidden State Transitions for Sequential Logic Locking. In 2022 IEEE International Symposium on Circuits and Systems (ISCAS) (pp. 1734-1738). IEEE.
 \end{itemize}
-}
+
+
+% \section{Awards}
+
+% \cventry{2014}{NCELL App Camp 2014 Category Winner (Business Category)}{}{}{}{
+% \begin{itemize}
+%     \item Presented Opinio mobile app (aggregated analysis and visualization of social media mentions).
+% \end{itemize}
+% }
+% \cventry{2014}{Startup Weekend Kathmandu 2014 Winner}{}{}{}{
+% \begin{itemize}
+%     \item Presented Opinio search (social media mention search and natural language analysis).
+% \end{itemize}
+% }
 
 
 
