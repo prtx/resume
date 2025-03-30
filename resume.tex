@@ -8,11 +8,12 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 \usepackage{enumitem}
+
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
@@ -22,18 +23,27 @@
 \usepackage[left=0.5in, right=0.5in, bottom=0.5in, top=0.5in]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage[backend=biber,style=numeric,sorting=none,bibhang=5em]{biblatex}
+\renewbibmacro{in:}{}
+\addbibresource{references.bib}
+\renewcommand*{\bibfont}{\small}
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
 
 % personal data
 \name{Pratik}{Shrestha}
 % \title{Graph Learning - Electronic Design Automation - Python}                               % optional, remove / comment the line if not wanted
 
-\address{Philadelphia, PA}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \address{Philadelphia, PA}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 % \phone[mobile]{+977-9849803636}                   % optional, remove / comment the line if not wanted
 % \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
 % \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-\email{ps937@drexel.com}                               % optional, remove / comment the line if not wanted
+\email{ps937@drexel.edu}                               % optional, remove / comment the line if not wanted
 \homepage{prtx.github.io}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{shresthapratik}
 \social[github]{prtx}
+% \social[googlescholar]{HeaeSksAAAAJ}
 % \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 % \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 % \quote{Some quote}                                 % optional, remove / comment the line if not wanted
@@ -55,13 +65,13 @@
 %-----       resume       ---------------------------------------------------------
 \vspace*{-10mm}
 \makecvtitle
-\vspace*{-12.5mm}
+\vspace*{-10mm}
 
 \section{Education}
 
 \cventry{2019 - Present}{Ph.D. in Electrical Engineering}{}{}{}{Drexel University, Philadelphia, Pennsylvania
-\\\textbf{Relevant Courseworks:}
-VLSI Design, ASIC Design, Machine Learning, Deep Learning, Hardware Security
+\\\textbf{Focus:} Machine Learning for Physical Design $\vert$ \textbf{Advisor:} Dr. Ioannis Savidis
+% VLSI Design, ASIC Design, Machine Learning, Deep Learning, Hardware Security
 \vspace{0.05in}
 }
 
@@ -70,7 +80,7 @@ VLSI Design, ASIC Design, Machine Learning, Deep Learning, Hardware Security
 % Statistics and Probability, Data Structure and Algorithm, Compiler Design, Artificial Intelligence
 }
 
-\section{Research Experience}
+\section{Work Experience}
 
 %\subsection{Vocational}
 
@@ -79,34 +89,31 @@ VLSI Design, ASIC Design, Machine Learning, Deep Learning, Hardware Security
     \item Representation learning guided electronic design automation.\vspace{-0.5em}
     \begin{itemize}
         \setlength\itemsep{-0.1em}
-        \item Developed an integrated framework for large scale circuit design dataset generation and rapid prototyping of deep learning models.
-        \item Modelled graph based neural networks to predict timing and interconnect impedance.
+        \item Developed an integrated framework for large scale circuit design dataset generation \cite{shrestha2024edaschema} and rapid prototyping of deep learning models \cite{shrestha2024edaml}.
+        \item Modelled graph based neural networks to predict timing \cite{shrestha2022graph} and interconnect impedance \cite{shrestha2023graph}.
         \vspace{-0.5em}
     \end{itemize}
     \item Hardware security and sequential circuit obfuscation.\vspace{-0.5em}
     \begin{itemize}
         \setlength\itemsep{-0.1em}
-        \item Developed synthesis algorithm and security metric for FSM locking achieving 8.53x increase in security.
+        \item Developed synthesis algorithm and security metric for FSM locking \cite{shrestha2022synthesis} achieving 8.53x increase in security.
+        \item Implemented sequential logic locking techniques on 65nm technology node for tapeout.
     \end{itemize}
 \end{itemize}
 }
 
-
-
-\section{Professional Experience}
-
-%\subsection{Vocational}
+\cventry{Oct 2024 - Mar 2025}{Visiting Graduate Student}{}{VLSI CAD Laboratory, University of California San Diego}{}{
+\begin{itemize}
+    \item Integration and benchmarking of graph-based physical design timing prediction and optimization models into academic placement and routing tools.
+\end{itemize}
+}
 
 \cventry{Jan 2018 - Jun 2019}{Engineering Consultant}{}{Leapfrog Technologies}{}{
 \begin{itemize}
     \setlength\itemsep{-0.1em}
-    \item \textbf{Ed-Fi Alliance Analytics Middleware:} Rapid synthesis and reporting of Texas school district data across rosters, transcripts, assessments, college applications, etc.
-    %  system that de-normalizes education-related data from multiple sources and allows education professionals to generate reports as per their requirements.
-    \item Developed yaml based domain specific language for rapid query generation.
-    \item Developed python modules for data extraction, parsing, pipeline, storage, report generation.
-    \item Created RESTful API for client-end applications and statistical analysis tool to monitor server traffic.
-    % \item Managed virtual servers at Amazon EC2, S3. Developed production deployment scripts.
-    % \item Optimized investment portfolios using Capital Asset Pricing Model and created automated trading algorithms.
+    \item Led the development of Ed-Fi Alliance Analytics Middleware, enabling efficient synthesis and reporting of Texas school district data.
+    \item Created a YAML-based domain specific language for rapid query generation, data extraction, and reporting.
+    \item Built a RESTful API for client applications and a tool for monitoring server traffic.
     \vspace{0.05in}
 \end{itemize}
 % \textbf{Technologies}: Python, Flask, PostgreSQL, MS-SQL, Airflow, Pandas, Amazon EC2, Nginx \\
@@ -116,10 +123,9 @@ VLSI Design, ASIC Design, Machine Learning, Deep Learning, Hardware Security
 \cventry{Jun 2017 - Jun 2019}{Software Engineer}{}{Beta Analytics}{}{
 \begin{itemize}
     \setlength\itemsep{-0.1em}
-    \item \textbf{NEPSEguide:} Pricing and risk analytic tools to support financial risk management.% Designed and developed the company's core product suite.
-    \item Designed data entry, normalization, and verification systems supporting 30+ remote data entry workers.
-    \item Designed data warehouse schema to support historical pricing data for Nepal stock exchange.
-    \item Implemented statistical metrics for predictive analyses. Developed stock screener and charting tools to analyze asset performance.
+    \item Developed NEPSEguide, a pricing and risk analytics tool for financial risk management.
+    \item Designed systems for data entry and warehouse schema for historical stock data.
+    \item Implemented predictive metrics and developed tools for stock analysis and performance charting.
     \vspace{0.05in}
 \end{itemize}
 % \textbf{Technologies}: Python, Flask, PostgreSQL, MongoDB, SQLAlchemy, Pandas \\
@@ -129,42 +135,41 @@ VLSI Design, ASIC Design, Machine Learning, Deep Learning, Hardware Security
 \cventry{Nov 2016 - Jun 2017}{Associate Developer}{}{Logic Information Systems}{}{
 \begin{itemize}
     \setlength\itemsep{-0.1em}
-    \item Implemented Oracle Retail Analytics Data-warehousing architecture and develop BI solutions.
-    \item Provided 24-hr technical support and consulted offshore clients on ETL batches.
+    \item Implemented Oracle Retail Analytics data warehousing and business intelligence solutions.
+    \item Provided 24/7 technical support and client consultation for ETL processes.
     \vspace{0.05in}
 \end{itemize}
 % \textbf{Technologies}: Oracle, ODI, OBIEE, BIP, Korn Shell, VBScipt, Python\\
 }
 
+\printbibliography[title={Selected Publications}]
 
-\cventry{Jun 2016 - Oct 2016}{Software Development Intern}{}{Logic Information Systems}{}{
-\begin{itemize}
-    \item Migrated ETL tool Oracle Data Integrator's (ODI) knowledge modules from Oracle to Teradata.
-\end{itemize}
-% \textbf{Technologies}: Oracle, Teradata, ODI, Korn Shell, Python, Django\\   
-}
+\newpage
 
-\section{Technical Proficiency}
+\section{Skills}
 {\small
 \cvitem{Languages}{Python, Verilog, VHDL, Bash, TCL, SQL (Expertise)}
 \cvitem{}{R, Matlab, Java, Javascript, VBScript, C++, C (Working Knowledge)}
-\cvitem{EDA}{Synopsys: DC Compiler, IC Compiler, PrimeTime; Cadence: Virtuoso, Innovus}
-\cvitem{Data/ML}{Pandas, Tensorboard, Statsmodel, Scikit-learn, Torch, Torch-geometric, NLTK}
-\cvitem{Databases}{PostgreSQL, MongoDB, MS-SQL, Oracle, Teradata}
+\cvitem{EDA}{Synopsys: DC Compiler, IC Compiler, PrimeTime; Cadence: Virtuoso, Innovus; OpenROAD}
+\cvitem{Data/ML}{PyTorch, TensorFlow, Torch-geometric, Tensorboard}
+% \cvitem{Databases}{PostgreSQL, MongoDB, MS-SQL, Oracle, Teradata}
 % \cvitem{DevOps}{Docker, Nginx, Linux Server Administration}
-\cvitem{Frameworks}{Docker, SQLAlchemy, Scrapy, Airflow, Selenium, Flask, Django}
+\cvitem{Frameworks}{Docker, SQLAlchemy, Airflow, Flask}
+% \cvitem{Frameworks}{Docker, SQLAlchemy, Airflow, Hadoop, Spark, AWS (SageMaker, Lambda, EC2), Azure ML, Kubernetes}
 % \cvitem{Operating Systems}{Windows, UNIX, Linux, MacOSX}
 }
 
-
-\section{Publications}
+\section{Software Tools}
 \begin{itemize}[labelindent=1.5em,leftmargin=*]
     \setlength\itemsep{-0.1em}
-    \small
-    \item \textbf{Shrestha, P.}, Phatharodom, S., \& Savidis, I. (2022, September). Graph Representation Learning for Gate Arrival Time Prediction. In Proceedings of the 2022 ACM/IEEE Workshop on Machine Learning for CAD (pp. 127-133).
-    \item \textbf{Shrestha, P.}, \& Savidis, I. (2022, May). Synthesis of Coupling Capacitance Based Hidden State Transitions for Sequential Logic Locking. In 2022 IEEE International Symposium on Circuits and Systems (ISCAS) (pp. 1734-1738). IEEE.
+    % \small
+    \item \textbf{EDA-schema \cite{shrestha2024edaschema}:} An open source physical design dataset for machine learning and a reference implementation of property graph datamodel schema developed to represent digital circuit designs and the associated attributes in the open dataset. \hfill \faGithub ~\url{https://github.com/drexel-ice/EDA-schema}
 \end{itemize}
 
+
+\section{Awards and Certifications}
+\cventry{2024}{Best Paper Award}{}{ACM Great Lakes Symposium on VLSI (GLSVLSI)}{}{}
+\cventry{2014}{Winner}{}{Startup Weekend Kathmandu}{}{}
 
 % \section{Awards}
 
@@ -184,9 +189,9 @@ VLSI Design, ASIC Design, Machine Learning, Deep Learning, Hardware Security
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
+% \nocite{*}
 \bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
